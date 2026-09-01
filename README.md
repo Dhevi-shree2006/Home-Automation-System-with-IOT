@@ -45,13 +45,25 @@ When we apply an active high signal to the signal pin of the relay module from a
  
 # PROGRAM:
 
+```
+from machine import Pin
+from utime import sleep
 
+sleep(0.01) # Wait for USB to connect
+print("Hello, Pi Pico!")
+
+led = Pin(5, Pin.OUT)
+while True:
+  led.toggle()
+  sleep(0.5)
+```
  
 # Output:
+<img width="1576" height="781" alt="image" src="https://github.com/user-attachments/assets/1a8c784b-c231-4748-b974-46f7ce50a39b" />
 
 
 
 ## Result:
 
-
+The Home Automation System with IoT successfully enabled remote monitoring and control of home appliances through the internet.
 
